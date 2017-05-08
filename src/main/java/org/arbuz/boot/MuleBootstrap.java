@@ -1,10 +1,7 @@
-package org.taptech.app;
+package org.arbuz.boot;
 
 
 import org.mule.api.MuleContext;
-import org.mule.api.MuleException;
-import org.mule.api.config.ConfigurationException;
-import org.mule.api.lifecycle.InitialisationException;
 import org.mule.config.spring.SpringXmlConfigurationBuilder;
 import org.mule.context.DefaultMuleContextFactory;
 import org.slf4j.Logger;
@@ -19,8 +16,6 @@ import org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfigura
 import org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.StaticApplicationContext;

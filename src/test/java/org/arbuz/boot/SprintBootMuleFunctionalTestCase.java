@@ -1,4 +1,4 @@
-package org.taptech.app;
+package org.arbuz.boot;
 
 import org.mule.api.config.ConfigurationBuilder;
 import org.mule.config.spring.SpringXmlConfigurationBuilder;
