@@ -12,6 +12,8 @@
       xmlns:jersey="http://www.mulesoft.org/schema/mule/jersey"
       xmlns:json="http://www.mulesoft.org/schema/mule/json"
       xmlns:ws="http://www.mulesoft.org/schema/mule/ws"
+      xmlns:context="http://www.springframework.org/schema/context"
+      xmlns:management="http://www.mulesoft.org/schema/mule/management"
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
@@ -23,8 +25,14 @@ http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/cu
 http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd
 http://www.mulesoft.org/schema/mule/jersey http://www.mulesoft.org/schema/mule/jersey/current/mule-jersey.xsd
 http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
-http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd" version="EE-3.7.1">
+http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+http://www.mulesoft.org/schema/mule/management http://www.mulesoft.org/schema/mule/management/current/mule-management.xsd">
 
+    <management:jmx-mx4j-adaptor jmxAdaptorUrl="http://0.0.0.0:9999" login="${jmx.login}" password="${jmx.password}"/>
+    <management:jmx-log4j/>
+
+    <context:property-placeholder location="application.properties"/>
 
     <flow name="main">
        <vm:inbound-endpoint path="in" doc:name="VM"/>
