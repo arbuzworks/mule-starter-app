@@ -32,7 +32,7 @@ http://www.mulesoft.org/schema/mule/management http://www.mulesoft.org/schema/mu
     <management:jmx-mx4j-adaptor jmxAdaptorUrl="http://0.0.0.0:9999" login="${jmx.login}" password="${jmx.password}"/>
     <management:jmx-log4j/>
 
-    <context:property-placeholder location="application.properties"/>
+    <context:property-placeholder ignore-resource-not-found="true" ignore-unresolvable="true" location="file:config/application.properties,classpath:application.properties" />
 
     <flow name="main">
        <vm:inbound-endpoint path="in" doc:name="VM"/>
