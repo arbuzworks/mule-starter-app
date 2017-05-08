@@ -1,9 +1,10 @@
-**/.idea
-**/target
-**/build
-**/.mule
+.idea/
+.mule/
+*.iml
+*.iws
+.DS_Store
+target/
+*dependency-reduced-pom.xml
 **/logs
-target/**
-.idea
-mule-starter-app.log
 /bin/
+*.log
