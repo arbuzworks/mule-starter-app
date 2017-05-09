@@ -21,6 +21,8 @@
 		<jdk.version>1.8</jdk.version>
 		<junit.version>4.9</junit.version>
         <spring.boot.version>1.2.3.RELEASE</spring.boot.version>
+        <jasypt.version>1.9.2</jasypt.version>
+        <icu4j.version>3.4.4</icu4j.version>
         <start-class>org.arbuz.boot.MuleBootstrap</start-class>
 	</properties>
 
@@ -75,6 +77,21 @@
 	</build>
 
     <dependencies>
+        <dependency>
+            <groupId>org.jasypt</groupId>
+            <artifactId>jasypt</artifactId>
+            <version>${jasypt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jasypt</groupId>
+            <artifactId>jasypt-spring31</artifactId>
+            <version>${jasypt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.icu</groupId>
+            <artifactId>icu4j</artifactId>
+            <version>${icu4j.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.eaio.uuid</groupId>
             <artifactId>uuid</artifactId>
